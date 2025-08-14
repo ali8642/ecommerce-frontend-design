@@ -277,7 +277,7 @@ const Home = () => {
 
       {/* ELECTRONICS AND GADGETS SECTION */}
       <div className="w-[90%] border border-gray-300 rounded mx-auto h-full bg-white my-4 flex lg:flex-stretch lg:flex-row flex-col">
-        <div className="text-lg lg:w-[25%] md:w-full py-12 px-8 bg-[url(./public/images/98.png)] bg-cover bg-center bg-no-repeat">
+        <div className="text-lg lg:w-[25%] md:w-full py-12 px-8 bg-[url(/public/images/98.png)] bg-cover bg-center bg-no-repeat">
           <h1 className="text-2xl font-bold">
             Consumer <br />
             electronics and <br />
