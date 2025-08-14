@@ -12,17 +12,17 @@ export default function Newsletter() {
         </p>
       </div>
       <div className="relative w-auto flex gap-4 justify-center">
-        <IoMailOutline className="text-2xl text-gray-500 relative top-3 left-13" />
+        <IoMailOutline className="text-2xl text-gray-500 relative top-3 left-12" />
         <input
           type="email"
           name="email"
           id="email"
           placeholder="Email"
-          className="bg-white border border-gray-200 px-10 py-2 text-lg rounded-md focus:outline-none"
+          className="bg-white border border-gray-200 px-8 py-2 text-lg rounded-md focus:outline-none"
         />
         <button
           type="submit"
-          className="w-auto py-2 px-6 bg-blue-500 cursor-pointer text-white rounded-md text-lg"
+          className="w-auto py-2 px-4 bg-blue-500 cursor-pointer text-white rounded-md text-lg"
         >
           Subscribe
         </button>

@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer>
       {/* FOOT LINKS SECTION */}
-      <div className="w-full bg-white">
+      <div className="w-full bg-white hidden lg:block">
         <div className="w-[90%] py-8 mx-auto flex justify-between">
           <div className="flex gap-2 flex-col">
             <img src="./images/brand/logo-colored.svg" className="w-40" />

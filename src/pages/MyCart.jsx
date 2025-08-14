@@ -6,8 +6,22 @@ import Card from "../components/Card.jsx";
 import { FaArrowLeft, FaTruck } from "react-icons/fa";
 import { MdChat } from "react-icons/md";
 import { IoIosLock } from "react-icons/io";
+import productDetails from "../data/productDetails.js";
 
 const MyCart = () => {
+  const getRandomProducts = () => {
+    const randomIndices = [];
+    while (randomIndices.length < 4) {
+      const randomIndex = Math.floor(Math.random() * productDetails.length);
+      if (!randomIndices.includes(randomIndex)) {
+        randomIndices.push(randomIndex);
+      }
+    }
+    return randomIndices.map((index) => productDetails[index]);
+  };
+
+  const randomProducts = getRandomProducts();
+
   return (
     <div className="w-full py-4 bg-[#F6FAFD] flex flex-col items-center gap-4">
       <div className="w-[90%]">
@@ -15,12 +29,12 @@ const MyCart = () => {
       </div>
 
       {/* ADDED TO CART */}
-      <div className="w-[90%] flex justify-between items-center">
+      <div className="w-[90%] flex lg:flex-row lg:justify-between flex-col items-center">
         {/* ITEMS SECTION */}
-        <div className="w-[70%] p-4 border border-gray-300 rounded bg-white flex flex-col items-center">
+        <div className="lg:w-[70%] w-full p-4 border border-gray-300 rounded bg-white flex flex-col items-center">
           {/* ITEM 1 */}
-          <div className="w-full border-b-1 border-gray-300 py-2 gap-4 flex flex-row items-center justify-between">
-            <div className="rounded border-2 border-gray-300">
+          <div className="w-full border-b-1 border-gray-300 py-2 gap-4 flex lg:flex-row items-center lg:justify-between flex-wrap">
+            <div className="rounded border-2 border-gray-300 min-w-[100px]">
               <img src="./images/cloth/1.jpg" alt="" width="100px" />
             </div>
             <div className="grow">
@@ -60,8 +74,8 @@ const MyCart = () => {
           </div>
 
           {/* ITEM 2 */}
-          <div className="w-full border-b-1 border-gray-300 py-2 gap-4 flex flex-row items-center justify-between">
-            <div className="rounded border-2 border-gray-300">
+          <div className="w-full border-b-1 border-gray-300 py-2 gap-4 flex lg:flex-row items-center lg:justify-between flex-wrap">
+            <div className="rounded border-2 border-gray-300 min-w-[100px]">
               <img src="./images/cloth/5.jpg" alt="" width="100px" />
             </div>
             <div className="grow">
@@ -101,8 +115,8 @@ const MyCart = () => {
           </div>
 
           {/* ITEM 3 */}
-          <div className="w-full border-b-1 border-gray-300 py-2 gap-4 flex flex-row items-center justify-between">
-            <div className="rounded border-2 border-gray-300">
+          <div className="w-full border-b-1 border-gray-300 py-2 gap-4 flex lg:flex-row items-center lg:justify-between flex-wrap">
+            <div className="rounded border-2 border-gray-300 min-w-[100px]">
               <img src="./images/interior/6.jpg" alt="" width="100px" />
             </div>
             <div className="grow">
@@ -159,9 +173,9 @@ const MyCart = () => {
         </div>
 
         {/* CHECKOUT SECTION */}
-        <div className="w-[28%] flex flex-col items-center gap-4">
+        <div className="lg:w-[28%] w-full flex flex-col items-center gap-4">
           {/* COUPON */}
-          <div className="w-full bg-white p-4 border border-gray-300 rounded">
+          <div className="w-full bg-white p-4 border border-gray-300 rounded hidden lg:block">
             <h1 className="text-lg mb-4">Have a coupon?</h1>
             <button
               type="submit"
@@ -210,7 +224,7 @@ const MyCart = () => {
       </div>
 
       {/* PROS OF SERVICES SECTION */}
-      <div className="w-[90%] p-4 flex gap-12">
+      <div className="w-[90%] p-4 flex gap-12 flex-col lg:flex-row">
         <div className="flex items-center gap-2">
           <IoIosLock className="w-14 h-14 p-2 text-4xl rounded-full bg-gray-300 text-gray-500" />
           <p className="flex flex-col">
@@ -242,36 +256,11 @@ const MyCart = () => {
           </h1>
         </div>
 
-        <div className="w-full flex justify-between items-center">
-          <Card
-            productImage="./images/tech/2.jpg"
-            productPrice="$271"
-            productDetail="Xiaomi Pad 5 (6GB - 256GB)"
-            productType="Tablet - Blue"
-            productRating="4.8"
-            className="border-none"
-          />
-          <Card
-            productImage="./images/tech/4.jpg"
-            productPrice="$179.39"
-            productDetail="iPhone 14 148GB"
-            productType="Mobile - Blue"
-            productRating="4.0"
-          />
-          <Card
-            productImage="./images/tech/8.jpg"
-            productPrice="$35.99"
-            productDetail="Huawei Watch 3 Classic"
-            productType="Smart Watch - Gray"
-            productRating="4.2"
-          />
-          <Card
-            productImage="./images/tech/7.jpg"
-            productPrice="$746.35"
-            productDetail="HUAWEI MateBook D 16"
-            productType="Laptop - Gray"
-            productRating="4.3"
-          />
+        <div className="w-full flex lg:justify-between lg:gap-0 gap-4 items-center lg:overflow-hidden  overflow-x-auto">
+          <Card product={randomProducts[0]} />
+          <Card product={randomProducts[1]} />
+          <Card product={randomProducts[2]} />
+          <Card product={randomProducts[3]} />
         </div>
       </div>
       <Discount />
