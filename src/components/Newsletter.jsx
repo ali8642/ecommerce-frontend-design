@@ -11,8 +11,8 @@ export default function Newsletter() {
           world
         </p>
       </div>
-      <div className="relative w-auto flex gap-4 justify-center">
-        <IoMailOutline className="text-2xl text-gray-500 relative top-3 left-12" />
+      <div className="relative w-auto flex gap-4 lg:justify-center lg:flex-row flex-col">
+        <IoMailOutline className="text-2xl text-gray-500 relative lg:top-3 lg:left-12 left-1.5 top-13" />
         <input
           type="email"
           name="email"

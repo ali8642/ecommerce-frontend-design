@@ -479,7 +479,7 @@ const Home = () => {
         <h1 className="text-2xl font-bold">Our extra services</h1>
 
         {/* CARDS */}
-        <div className="w-full flex lg:justify-between lg:flex-row items-center md:flex-col gap-4">
+        <div className="w-full flex lg:justify-between lg:flex-row items-center flex-col gap-4">
           <div className="lg:w-[24%] w-[80%] rounded-md border border-gray-300 bg-white hover:scale-105 duration-300 hover:shadow cursor-pointer">
             <img src="./images/108.png" width="100%" />
             <p className="p-4 flex justify-between text-lg font-medium">

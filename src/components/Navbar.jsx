@@ -54,7 +54,7 @@ export default function Navbar() {
         </div>
 
         {/* NAV-LINKS SECTION */}
-        <div className="flex gap-2 lg:gap-6 sm:p-4 lg:p-0">
+        <div className="flex gap-2 lg:gap-6 lg:p-0 p-4">
           <Link
             to="/"
             className="flex flex-col justify-center items-center text-gray-400"
