@@ -101,7 +101,7 @@ const Home = () => {
             <p className="text-lg text-gray-500 mb-2">Hygiene equipments</p>
           </h1>
 
-          <Countdown duration={"2025-08-15"} />
+          <Countdown duration={"2025-10-02"} />
         </div>
 
         <div className="overflow-x-auto no-scrollbar flex md:mt-4 lg:mt-0 md:border-t border-gray-300">
