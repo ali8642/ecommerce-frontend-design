@@ -12,3 +12,13 @@ createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </StrictMode>
 );
+
+window.onload = function () {
+  // Check if we're not already on home page
+  if (
+    window.location.pathname !== "/" &&
+    window.location.pathname !== "/home"
+  ) {
+    window.location.replace("/");
+  }
+};
